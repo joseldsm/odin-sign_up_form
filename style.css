@@ -10,6 +10,14 @@
 }
 
 body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background-color: white;
+    width: 1000px;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -25,28 +33,64 @@ header {
     justify-content: center;
     color: white;
     text-align: center;
+    padding: 6px;
 }
 
-header p:first-of-type {
+h1 {
     margin: auto;
     font-family: "Source code pro";
     font-size: 1.2rem;
+    font-weight: normal;
     align-self: center;
 }
 
 header p:last-of-type {
-    padding: 5px;
-    font-size: 0.55rem;
+    font-size: 0.5rem;
 }
 
-.content {
+label {
+    display: block;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+#content {
+    padding: 40px;
     background-color: white;
     flex-basis: 500px;
     flex-grow: 3;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content p {
+    padding: 10px 0;
+}
+
+#intro {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#form {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 5px
+}
+
+#form div {
+    flex-basis: 100px;
+    flex-grow: 1;
 }
 
 @media screen and (max-width: 500px) {
-    body {
+    #container {
         flex-direction: column;
     }
   }
