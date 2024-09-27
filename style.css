@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Source code pro";
+    src: url("font/source-code-pro/SourceCodeVF-Upright.ttf.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    flex-basis: 200px;
+    flex-grow: 1;
+    background-image: url(img/black_rock.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+header p:first-of-type {
+    margin: auto;
+    font-family: "Source code pro";
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+header p:last-of-type {
+    padding: 5px;
+    font-size: 0.55rem;
+}
+
+.content {
+    background-color: white;
+    flex-basis: 500px;
+    flex-grow: 3;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        flex-direction: column;
+    }
+  }
