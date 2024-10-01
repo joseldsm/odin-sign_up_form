@@ -17,7 +17,7 @@ body {
 
 #container {
     background-color: white;
-    width: 1000px;
+    width: 1200px;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -49,15 +49,21 @@ header p:last-of-type {
 }
 
 label {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: grey;
     text-transform: uppercase;
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 4px;
 }
 
 #content {
+    margin: 40px;
     padding: 40px;
     background-color: white;
     flex-basis: 500px;
@@ -65,7 +71,8 @@ label {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 60px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #content p {
@@ -74,19 +81,57 @@ label {
 
 #intro {
     font-size: 1.2rem;
-    font-weight: bold;
 }
 
-#form {
+span {
+    font-size: .8rem;
+    color: lightgray;
+}
+
+form > div {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 5px
+    gap: 15px 50px;
+    padding: 20px 0px;
 }
 
-#form div {
-    flex-basis: 100px;
-    flex-grow: 1;
+label > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+label div input:valid + span {
+    color: rgb(10, 197, 10);
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    width: 90px;
+    height: 38px;
+    background-color: darkslategray;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    border: solid 1px lightgray;
+    border-radius: 3px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: rgb(76, 129, 129);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 @media screen and (max-width: 500px) {
